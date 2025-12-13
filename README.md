@@ -18,6 +18,14 @@ for Mac
 
     % gem install irkit
 
+macOSの最近のバージョンで `dnssd` gem のビルドエラーが発生する場合は、以下のコマンドを実行:
+
+    % SDKROOT=$(xcrun --show-sdk-path) gem install irkit
+
+または、開発用にこのリポジトリをクローンした場合:
+
+    % SDKROOT=$(xcrun --show-sdk-path) bundle install
+
 for Debian/Ubuntu Linux
 
     % sudo apt-get install libavahi-compat-libdnssd-dev
