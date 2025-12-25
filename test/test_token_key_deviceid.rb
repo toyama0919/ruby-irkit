@@ -1,6 +1,6 @@
 require File.expand_path 'test_helper', File.dirname(__FILE__)
 
-class TestTokenKeyDeviceID < MiniTest::Test
+class TestTokenKeyDeviceID < Minitest::Test
 
   def test_token_key_deviceid
     device = IRKit::Device.find.first

@@ -8,7 +8,7 @@
 
 ## Requirements
 
-- Ruby2.0+
+- Ruby 2.7+
 - Mac OSX or Linux
 
 
