@@ -6,8 +6,8 @@ module IRKit
 
     DATA_FILE = ENV["IRKIT_DATA_FILE"] || File.expand_path('.irkit.json', ENV['HOME'])
 
-    if File.exists?(DATA_FILE) || DATA_FILE =~ /\A#{URI::regexp(['http', 'https'])}\z/
-      Data = Hashie::Mash.new JSON.parse(open(DATA_FILE).read)
+    if File.exist?(DATA_FILE) || DATA_FILE =~ /\A#{URI::regexp(['http', 'https'])}\z/
+      Data = Hashie::Mash.new JSON.parse(URI.open(DATA_FILE).read)
     else
       Data = Hashie::Mash.new("IR" => {}, "Device" => {})
     end
